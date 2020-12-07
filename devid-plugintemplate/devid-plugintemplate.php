@@ -25,6 +25,6 @@ if (!defined('DEVID_PLUGINTEMPLATE_FILE')) {
 }
 
 if (!class_exists('devidplugintemplate')) {
-	require_once($wtwplugins->contentpath."\\plugins\\devid-plugintemplate\\functions\\class_plugin.php");
+	require_once($wtwplugins->contentpath."/plugins/devid-plugintemplate/functions/class_plugin.php");
 }
 ?>

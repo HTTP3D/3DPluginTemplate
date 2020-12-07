@@ -16,17 +16,19 @@ try {
 	$zfieldname = $wtwhandlers->getPost('fieldname','');
 
 	/* set response array of values - customize as needed */
-	$zresponse = array();
+	$zresponse = array(
+		'serror'=> ''
+	);
 	switch ($zfunction) {
-		case "saveactionzone":
+		case "savesampledata":
 			/* Sample function, you can save records in the database and respond with error message if there is an error */
 			if ($devidplugintemplate_functions->saveSample($zfieldid, $zfieldname) == false) {
 				$zresponse = array(
-					'serror'=> 'Could not save Action Zone'
+					'serror'=> 'Could not save Sample Data'
 				);
 			}
 			break;
-		case "getactionzones":
+		case "getsampledata":
 			/* Sample function, you can return records from the database as an array */
 			$zresponse = $devidplugintemplate_functions->getSample($zfieldid);
 			break;
